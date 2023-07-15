@@ -1,0 +1,15 @@
+{
+    "github": {
+        "icon": "fa-brands fa-github",
+        "url": "https://github.com/DataIsGone"
+    },
+    "linkedin": {
+        "icon": "fa-brands fa-linkedin-in",
+        "url": "https://www.linkedin.com/in/ryanalexdavis/"
+    },
+    "devpost": {
+        "icon": "fa-solid fa-trophy",
+        "url": "https://devpost.com/NODATA"
+    }
+
+}
