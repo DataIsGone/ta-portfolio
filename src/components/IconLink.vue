@@ -1,5 +1,5 @@
 <template>
-    <a :link="link" target="_blank">
+    <a :href="link" target="_blank">
       <i :class="iconClass"></i>
     </a>
   </template>
@@ -22,7 +22,7 @@
   
   <style scoped>
   i {
-    /* padding: 0; */
+    padding: 0 1vh;
     font-size: 24px;
     color: #000;
   }

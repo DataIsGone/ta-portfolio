@@ -1,3 +1,8 @@
 {
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis tristique tellus, in molestie nisl rhoncus eget. Donec posuere elit a sodales pulvinar. Morbi sit amet interdum nulla. Aenean malesuada non justo vel rutrum. Suspendisse gravida vel est a mattis. Integer mollis velit faucibus ligula accumsan fringilla. Nam eu egestas nibh. Donec feugiat et turpis id elementum. Suspendisse eu tempus neque, non sollicitudin risus. Curabitur consectetur venenatis feugiat. In vitae augue metus. Phasellus porttitor varius feugiat. Ut ex felis, consectetur ut neque sit amet, molestie consectetur nunc. Sed vel magna felis. Vivamus nulla risus, sagittis a iaculis ac, bibendum nec urna. Nulla eu velit a magna maximus rutrum."
+    "pic": "src/assets/img/splash.gif",
+    "text": {
+        "first": "Ryan Davis is an aspiring technical artist and digital artist. She earned her bachelor's degrees in Art Practice from UC Berkeley (2015) and in Computer Science from Oregon State University (2022).",
+        "second": "She has held different positions in the animation and mixed reality industries; previous companies have included Industrial Light & Magic, Pixar Animation Studios, Microsoft, and Intel with projects revolving around 3D graphics, augmented reality tools, photogrammetry, and art education.",
+        "third": "Ryan is currently located in San Diego, CA and enjoys painting, gardening, 3D printing, MMO gaming, and being a giant Pokemon nerd. She's probably trying to complete a quest in Pokemon Go as you're reading this."
+    }
 }
