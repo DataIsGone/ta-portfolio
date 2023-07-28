@@ -16,20 +16,15 @@ onMounted(async () => {
 </script>
 
 <template>
+  <!-- Place this area in its own component -->
   <div class="row container-fluid">
-    <!-- Bio Pic -->
+    <div class="col-sm"></div>
     <div class="col-sm">
-      <img :src="bio.pic">
-    </div>
-    <!-- Bio Text -->
-    <div class="col-sm">
-      <p>{{ bio.text.first }}</p>
-      <p>{{ bio.text.second }}</p>
-      <p>{{ bio.text.third }}</p>
+      <span>{{ bio.bio }}</span>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm bio-text">
+    <div class="col-sm">
       <IconLink v-for="(socialMedia, index) in socialMedia"
         :key="index"
         :link="socialMedia.url"
@@ -40,10 +35,4 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-  .row {
-    padding: 2vh 0 5vh 0;
-  }
-  .col-sm {
-    padding: 0 10vh;
-  }
 </style>
