@@ -17,8 +17,10 @@ onMounted(async () => {
 
 <template>
   <!-- Place this area in its own component -->
-  <div class="row container-fluid">
+  <div class="row">
     <div class="col-sm"></div>
+  </div>
+  <div class="row">
     <div class="col-sm">
       <span>{{ bio.bio }}</span>
     </div>
