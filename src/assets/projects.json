@@ -4,42 +4,48 @@
         "desc": "test",
         "img": {
             "preview": "src/assets/img/bnb_card.gif"
-        }
+        },
+        "tags": ["tag1, tag2"]
     },
     "project_1": {
         "name": "project 1",
         "desc": "test",
         "img": {
             "preview": "src/assets/img/bnb_card.gif"
-        }
+        },
+        "tags": ["tag1"]
     },
     "project_2": {
         "name": "project 1",
         "desc": "test",
         "img": {
             "preview": "src/assets/img/bnb_card.gif"
-        }
+        },
+        "tags": ["tag2"]
     },
     "project_3": {
         "name": "project 1",
         "desc": "test",
         "img": {
             "preview": "src/assets/img/bnb_card.gif"
-        }
+        },
+        "tags": ["tag1, tag2"]
     },
     "project_4": {
         "name": "project 1",
         "desc": "test",
         "img": {
             "preview": "src/assets/img/catiator_card.png"
-        }
+        },
+        "tags": ["tag1, tag2"]
     },
     "project_5": {
         "name": "project 1",
         "desc": "test",
         "img": {
             "preview": "src/assets/img/bnb_card.gif"
-        }
+        },
+        "tags": ["tag2"]
     }
 }
   
