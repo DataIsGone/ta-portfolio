@@ -56,13 +56,5 @@ console.log(uniqueTags);
   </div>
 </template>
 
-<!-- <script setup>
-  import Filter from '../Filter.vue'
-</script>
-
-<template>
-  <Filter></Filter>
-</template>
-
 <style scoped>
-</style> -->
+</style>
