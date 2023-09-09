@@ -1,9 +1,9 @@
 <template>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         <a :href="cardURL">
-            <div class="card bg-dark text-white">
-                <img class="card-img" :src="cardImg" alt="Card image">
-                <div class="card-img-overlay">
+            <div class="card bg-dark text-white align-self-start">
+                <img class="card-img-top" :src="cardImg" alt="Card image">
+                <div class="card-body">
                     <h5 class="card-title">{{ cardTitle }}</h5>
                     <p class="card-text">{{ cardDesc }}</p>
                 </div>
@@ -24,9 +24,9 @@
   };
   </script>
   
-  <style scoped>
+<style scoped>
     .card {
-       margin: 1em;
-       padding: 0; 
+        margin: 0.5em;
+        padding: 0;
     }
   </style>

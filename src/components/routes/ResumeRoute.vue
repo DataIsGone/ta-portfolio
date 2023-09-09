@@ -64,6 +64,8 @@
             </div>
         </div>
     </div>
+
+    <div class="spacer"></div>
 </template>
   
 <script setup>
@@ -121,10 +123,14 @@
     ]);
 </script>
   
-  <style scoped>
-  .resume {
-    width: 80%;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  </style>
+<style scoped>
+    .resume {
+        width: 80%;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .spacer {
+        height: 5em;
+    }
+</style>
