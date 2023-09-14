@@ -1,6 +1,29 @@
+<script>
+import { useRouter } from 'vue-router';
+
+export default {
+    name: 'Card',
+    props: {
+        cardTitle: 'Card Title',
+        cardDesc: 'Card Desc',
+        cardProjId: -1,
+        cardImg: '#'
+    },
+    setup() {
+        const router = useRouter()
+        const goToPage = (pageId) => {
+            router.push({
+                path: `/project/${pageId}` 
+            })
+        }
+        return { goToPage }
+    }
+};
+</script>
+
 <template>
     <div class="col-sm-6">
-        <a :href="cardURL">
+        <a href="#" @click.prevent="goToPage(cardProjId)">
             <div class="card bg-dark text-white">
                 <img class="card-img" :src="cardImg" alt="Card image">
                 <div class="card-img-overlay">
@@ -12,21 +35,9 @@
     </div>
 </template>
   
-  <script>
-  export default {
-    name: 'Card',
-    props: {
-        cardTitle: 'Card Title',
-        cardDesc: 'Card Desc',
-        cardURL: '#',
-        cardImg: '#'
-    }
-  };
-  </script>
-  
-  <style scoped>
+<style scoped>
     .card {
-       margin: 1em;
-       padding: 0; 
+        margin: 1em;
+        padding: 0; 
     }
-  </style>
+</style>
