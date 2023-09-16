@@ -1,38 +1,40 @@
 <script>
-import { useRouter } from 'vue-router';
+    import { useRouter } from 'vue-router';
 
-export default {
-    name: 'Card',
-    props: {
-        cardTitle: 'Card Title',
-        cardDesc: 'Card Desc',
-        cardProjId: -1,
-        cardImg: '#'
-    },
-    setup() {
-        const router = useRouter()
-        const goToPage = (pageId) => {
-            router.push({
-                path: `/project/${pageId}` 
-            })
+    export default {
+        name: 'Card',
+        props: {
+            cardTitle: String,
+            cardDesc: String,
+            cardProjId: Number,
+            cardImg: String,
+            cardTask: String
+        },
+        setup(props) {
+            const router = useRouter()
+            const goToPage = (pageId) => {
+                router.push({
+                    path: `/project/`,
+                    query: {projId: pageId}
+                })
+            }
+            return { goToPage }
         }
-        return { goToPage }
-    }
-};
+    };
 </script>
 
 <template>
-    <div class="col-sm-6">
-        <a href="#" @click.prevent="goToPage(cardProjId)">
-            <div class="card bg-dark text-white">
-                <img class="card-img" :src="cardImg" alt="Card image">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">{{ cardTitle }}</h5>
-                    <p class="card-text">{{ cardDesc }}</p>
-                </div>
+    <a href="#" @click.prevent="goToPage(cardProjId)">
+        <div class="card mb-3">
+            <img class="card-img-top" :src="cardImg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ cardTitle }}</h5>
+                <p class="card-text">{{ cardDesc }}</p>
+                <p class="card-text">{{ cardTask }}</p>
+                <p>(learn more)</p>
             </div>
-        </a>
-    </div>
+        </div>
+    </a>
 </template>
   
 <style scoped>

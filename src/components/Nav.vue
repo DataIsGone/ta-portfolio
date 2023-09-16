@@ -15,9 +15,6 @@
                 <li class="nav-item">
                     <router-link class="nav-link" to="/about">About</router-link>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Now</a>
-                </li>
             </ul>
         </div>
     </nav>

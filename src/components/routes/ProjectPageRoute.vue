@@ -1,38 +1,24 @@
 <script setup>
-    import { ref, watch, onMounted } from 'vue';
+    import { ref, onMounted, computed } from 'vue';
     import { useRoute } from 'vue-router';
-
+  
     const route = useRoute();
-    const layout = ref(route.query.layout || 'default');
-    const pageContent = ref({
-        title: 'Default',
-        content: 'Default content'
+    const contents = ref({});
+  
+    onMounted(async () => {
+        const response = await fetch('/src/assets/projects.json');
+        contents.value = await response.json();
     });
-
-    const fetchData = async () => {
-        const response = await fetch(
-            '/src/assets/projects.json'
-        );
-        const data = await response.json();
-        pageContent.value = data[layout.value] || {
-            title: 'Default',
-            content: 'Default content'
-        };
-    };
-
-    watch(route, () => {
-        layout.value = route.query.layout || 'default';
-        fetchData();
+    
+    const currentContent = computed(() => {
+        const projId = route.query.projId;
+        return contents.value[projId] || 'Default content';
     });
 </script>
 
 <template>
     <div>
-        <h1>{{ pageContent.title }}</h1>
-        <div>{{ pageContent.title }}</div>
+      <h1>Dynamic Content</h1>
+      <p>{{ currentContent.projDesc }}</p>
     </div>
 </template>
-
-<style scoped>
-    
-</style>

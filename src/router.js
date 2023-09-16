@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutRoute from './components/routes/AboutRoute.vue'
-import HomeRoute from './components/routes/HomeRoute.vue'
 import ProjectsRoute from './components/routes/ProjectsRoute.vue'
 import ResumeRoute from './components/routes/ResumeRoute.vue'
 
@@ -8,13 +7,12 @@ import ResumeRoute from './components/routes/ResumeRoute.vue'
 import ProjectPageRoute from './components/routes/ProjectPageRoute.vue'
 
 const routes = [
-  { path: '/', component: HomeRoute },
+  { path: '/', component: ProjectsRoute },
   { path: '/projects', component: ProjectsRoute },
   { path: '/resume', component: ResumeRoute },
   { path: '/about', component: AboutRoute },
-  { path: '/project/:id', component: ProjectPageRoute },
-  // now
-  { path: '/:catchAll(.*)', component: HomeRoute },
+  { path: '/project/', component: ProjectPageRoute },
+  { path: '/:catchAll(.*)', component: ProjectsRoute },
 ]
 
 const router = createRouter({

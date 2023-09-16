@@ -2,12 +2,13 @@
   import Card from '../Card.vue';
   import { ref, onMounted, computed } from 'vue';
 
+  // FILTER
   const filterTag = ref(null);                                    // Tag currently selected for filtering
   const items = ref([]);
 
   const fetchData = async() => {
     try {
-      const response = await fetch('/src/assets/projects.json');  // Ensure the correct path
+      const response = await fetch('/src/assets/projectcards.json');  // Ensure the correct path
       items.value = await response.json();
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -35,8 +36,6 @@
   const resetFilter = () => {
     filterTag.value = null;
   };
-
-  console.log(filteredItems);
 </script>
 
 <template>
@@ -58,8 +57,8 @@
           :cardTitle="item.name"
           :cardDesc="item.desc"
           :cardImg="item.preview"
-          :cardProjId="item.projId">
-        </Card>
+          :cardTask="item.task"
+          :cardProjId="item.id"/>
     </div>
   </div>
   <div class="spacer"></div>
