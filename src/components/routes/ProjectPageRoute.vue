@@ -19,17 +19,24 @@
 </script>
 
 <template>
-    <div class="section">
+    <div class="section sticky-top title">
       <h1>{{ currProj.projTitle }}</h1>
+      <ProjNav></ProjNav>
     </div>
-    <div class="section">
-        <ProjNav></ProjNav>
-    </div>
+    <div class="spacer"></div>
     <div class="section" v-html="currProj.projDesc"></div>
 </template>
 
 <style scoped>
     .section {
         padding: 1em;
+    }
+    
+    .title {
+        background-color: white;
+    }
+
+    .spacer {
+        height: 5em;
     }
 </style>

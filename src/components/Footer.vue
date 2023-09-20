@@ -1,10 +1,25 @@
 <script setup>
-  // Your setup logic here
+  import IconLink from './IconLink.vue'
+
+  import { ref, onMounted } from 'vue';
+
+  const bio = ref([]);
+  const socialMedia = ref([]);
+
+  onMounted(async () => {
+    const smResponse = await fetch('src/assets/socialmedia.json');
+    socialMedia.value = await smResponse.json();
+  });
 </script>
 
 <template>
   <footer>
-    Footer content
+    Ryan Davis
+    <IconLink v-for="(socialMedia, index) in socialMedia"
+        :key="index"
+        :link="socialMedia.url"
+        :iconClass="socialMedia.icon">
+    </IconLink>
   </footer>
 </template>
 

@@ -16,7 +16,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  <!-- Place this area in its own component -->
   <div class="row">
     <div class="col-sm"></div>
   </div>
