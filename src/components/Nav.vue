@@ -26,8 +26,8 @@
   };
   </script>
   
-  <style scoped>
+<style scoped>
     .navbar {
         padding: 5px 20px;
     }
-  </style>
+</style>

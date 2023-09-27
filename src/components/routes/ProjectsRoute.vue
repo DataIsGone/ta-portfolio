@@ -57,7 +57,7 @@
           :cardTitle="item.name"
           :cardDesc="item.desc"
           :cardImg="item.preview"
-          :cardTask="item.task"
+          :cardRole="item.role"
           :cardProjId="item.id"/>
     </div>
   </div>

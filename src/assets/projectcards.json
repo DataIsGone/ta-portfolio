@@ -1,8 +1,43 @@
 [
-    { "id": 0, "name": "project 0", "desc": "test 0", "task": "Did shaders", "preview": "src/assets/img/cardTest1.png", "tags": ["tag2", "tag1"] },
-    { "id": 1, "name": "project 1", "desc": "test 1", "task": "Did C++", "preview": "src/assets/img/cardTest1.png", "tags": ["tag1"] },
-    { "id": 2, "name": "project 2", "desc": "test 2", "task": "Did whatever", "preview": "src/assets/img/cardTest1.png", "tags": ["tag1"] },
-    { "id": 3, "name": "project 3", "desc": "test 3", "task": "More stuff", "preview": "src/assets/img/cardTest1.png", "tags": ["tag1"] },
-    { "id": 4, "name": "project 4", "desc": "test 4", "task": "I drew this", "preview": "src/assets/img/cardTest1.png", "tags": ["tag1", "tag2"] },
-    { "id": 5, "name": "project 5", "desc": "test 5", "task": "okay", "preview": "src/assets/img/cardTest1.png", "tags": ["tag1"] }
+    {
+        "id": 0,
+        "name": "Hablo Gato",
+        "desc": "VR game prototype for language-immersion through speech recognition",
+        "role": "<b>Tech</b>: NPC creation (generator, Unity NavMesh path-finding), 2.5D art style in VR",
+        "preview": "src/assets/img/cardTest1.png",
+        "tags": ["Tools", "Programming", "2D"]
+    },
+    {
+        "id": 1,
+        "name": "Microsoft Holograms",
+        "desc": "Videogrammetric content made for clients during contract spanning 2017 - 2019",
+        "role": "Processed point cloud data into textured meshes, post-processing work with Adobe Photoshop and Autodesk Maya, proprietary software QA",
+        "preview": "src/assets/img/cardTest1.png",
+        "tags": ["Optimization", "3D"]
+    },
+    {
+        "id": 2,
+        "name": "Catiator",
+        "desc": "VR game prototype for learning American Sign Language through gesture recognition",
+        "role": "Character design, modeling sheet, 3D modeling, rigging, animation",
+        "preview": "src/assets/img/cardTest1.png",
+        "tags": ["Rigging", "3D"]
+    },
+    {
+        "id": 3,
+        "name": "Starmetry",
+        "desc": "Prototype level for math-focused narrative game",
+        "role": "Solo project - all art and development was made by me",
+        "preview": "src/assets/img/cardTest1.png",
+        "tags": ["Programming", "2D"]
+    },
+    {
+        "id": 4,
+        "name": "Pixel Art",
+        "desc": "Commissioned and volunteer works created in a high-resolution pixel art style",
+        "role": "All art is hand-made by me - no AI used",
+        "preview": "src/assets/img/cardTest1.png",
+        "tags": ["2D"]
+    }
+    
 ]

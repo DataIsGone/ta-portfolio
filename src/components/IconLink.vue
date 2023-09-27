@@ -1,5 +1,5 @@
 <template>
-    <a :link="link" target="_blank">
+    <a class="icon" :href="link" target="_blank" rel="noopener noreferrer">
       <i :class="iconClass"></i>
     </a>
   </template>
@@ -25,5 +25,8 @@
     /* padding: 0; */
     font-size: 24px;
     color: #000;
+  }
+  .icon {
+    padding: 0px 10px;
   }
   </style>

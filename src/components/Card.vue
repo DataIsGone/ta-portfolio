@@ -8,7 +8,7 @@
             cardDesc: String,
             cardProjId: Number,
             cardImg: String,
-            cardTask: String
+            cardRole: String
         },
         setup(props) {
             const router = useRouter()
@@ -24,17 +24,17 @@
 </script>
 
 <template>
-    <a href="#" @click.prevent="goToPage(cardProjId)">
-        <div class="card mb-3">
-            <img class="card-img-top" :src="cardImg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{ cardTitle }}</h5>
-                <p class="card-text">{{ cardDesc }}</p>
-                <p class="card-text">{{ cardTask }}</p>
+    <div class="card mb-3">
+        <img class="card-img-top" :src="cardImg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ cardTitle }}</h5>
+            <p class="card-text">{{ cardDesc }}</p>
+            <p class="card-text" v-html="cardRole"></p>
+            <a href="#" @click.prevent="goToPage(cardProjId)">
                 <p>(learn more)</p>
-            </div>
+            </a>
         </div>
-    </a>
+    </div>
 </template>
   
 <style scoped>
