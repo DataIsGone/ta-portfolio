@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <footer>
+  <footer class="sticky-bottom">  <!-- class="sticky-bottom" if you want to make this sticky in the future -->
     Ryan Davis
     <IconLink v-for="(socialMedia, index) in socialMedia"
         :key="index"

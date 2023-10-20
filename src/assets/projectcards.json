@@ -4,7 +4,7 @@
         "name": "Hablo Gato",
         "desc": "VR game prototype for language-immersion through speech recognition",
         "role": "<b>Tech</b>: NPC creation (generator, Unity NavMesh path-finding), 2.5D art style in VR",
-        "preview": "src/assets/img/cardTest1.png",
+        "preview": "src/assets/img/cards/hg_card.gif",
         "tags": ["Tools", "Programming", "2D"]
     },
     {
@@ -12,19 +12,11 @@
         "name": "Microsoft Holograms",
         "desc": "Videogrammetric content made for clients during contract spanning 2017 - 2019",
         "role": "Processed point cloud data into textured meshes, post-processing work with Adobe Photoshop and Autodesk Maya, proprietary software QA",
-        "preview": "src/assets/img/cardTest1.png",
+        "preview": "src/assets/img/cards/mrcs_card.gif",
         "tags": ["Optimization", "3D"]
     },
     {
         "id": 2,
-        "name": "Catiator",
-        "desc": "VR game prototype for learning American Sign Language through gesture recognition",
-        "role": "Character design, modeling sheet, 3D modeling, rigging, animation",
-        "preview": "src/assets/img/cardTest1.png",
-        "tags": ["Rigging", "3D"]
-    },
-    {
-        "id": 3,
         "name": "Starmetry",
         "desc": "Prototype level for math-focused narrative game",
         "role": "Solo project - all art and development was made by me",
@@ -32,11 +24,11 @@
         "tags": ["Programming", "2D"]
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Pixel Art",
         "desc": "Commissioned and volunteer works created in a high-resolution pixel art style",
         "role": "All art is hand-made by me - no AI used",
-        "preview": "src/assets/img/cardTest1.png",
+        "preview": "src/assets/img/cards/catiator_card.png",
         "tags": ["2D"]
     }
     

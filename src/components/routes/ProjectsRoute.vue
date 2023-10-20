@@ -40,17 +40,25 @@
 
 <template>
   <div class="container-fluid">
+    <div class="align">
+    <h1>Projects</h1>
+    <hr>
     <nav class="navbar-filter">
-      <span>Filter by Tag: </span>
-      <a @click="resetFilter">All</a>
-      <span>&nbsp;&nbsp;</span>
-      <a v-for="(tag, index) in uniqueTags" :key="tag" @click="filterByTag(tag)">
-        <span>{{ tag }}</span>
-        <span v-if="index != uniqueTags.length - 1">&nbsp;&nbsp;</span>
-      </a>
+      <div class="wrap">
+        <span>Filter by Tag: </span>
+          <a @click="resetFilter">All</a>
+          <span>&nbsp;&nbsp;</span>
+      </div>
+      <div v-for="(tag, index) in uniqueTags" :key="tag" class="wrap">
+        <a @click="filterByTag(tag)">
+          <span>{{ tag }}</span>
+          <span v-if="index != uniqueTags.length - 1">&nbsp;&nbsp;</span>
+        </a>
+      </div>
     </nav>
   </div>
-  <div class="container">
+  </div>
+  <div class="container center">
     <div class="row">
         <Card v-for="(item, index) in filteredItems"
           :key="index"
@@ -66,11 +74,31 @@
 
 <style scoped>
 .navbar-filter {
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-align: left;
 }
 
 .spacer {
   height: 5em;
+}
+
+.wrap {
+  display: inline-block;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: left;
+  padding: 1em 0 0 10px;
+}
+
+hr {
+  padding: 0 10px;
+}
+.align {
+  margin: 0 5em;
 }
 </style>

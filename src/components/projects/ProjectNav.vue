@@ -25,7 +25,7 @@
             v-for="(sectionName, index) in currProj.projSection" 
             :key="index">
                <Anchor :text=sectionName :targetId=sectionName></Anchor>
-               <span v-if="index != currProj.projSection.length - 1">&nbsp;&nbsp;</span>
+               <span v-if="index != currProj.projSection.length - 1">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
             </span>
         </div>
 </template>
