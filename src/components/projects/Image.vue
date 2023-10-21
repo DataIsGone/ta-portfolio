@@ -13,16 +13,15 @@
     });
 
     const showLightbox = ref(false);
-
 </script>
 
 <template>
     <div class="ex">
         <!-- Image that triggers the lightbox -->
-        <img :src="exImg" alt="Thumbnail" class="thumbnail" @click="showLightbox = true">
+        <img :src="exImg" alt="Thumbnail" class="thumbnail" @click="showLightbox=true">
 
         <!-- Lightbox -->
-        <div v-if="showLightbox" class="lightbox" @click="showLightbox = false">
+        <div v-if="showLightbox" class="lightbox" @click="showLightbox=false">
         <img :src="exImg" :alt="exDesc" class="lightbox-image">
         </div>
         <br>
@@ -34,16 +33,10 @@
     .ex {
         padding: 1em;
     }
-
-    /* .ex img {
-        max-height: 500px;
-        max-width: 500px;
-    } */
-
     .thumbnail {
         cursor: pointer;
-        max-height: 500px;
-        max-width: 500px;
+        height: 335px;
+        width: 600px;
     }
 
     .lightbox {
@@ -56,7 +49,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1000;
+        z-index: 9999;
     }
 
     .lightbox-image {
@@ -70,6 +63,17 @@
     .ex {
         width: 100%;
         margin: 0 auto;
-    }    
+        padding: 0;
+    }
+    
+    .lightbox img {
+        max-width: 75%;
+        max-height: 100;
+    }
+
+    .thumbnail {
+        max-height: 300px;
+        max-width: 300px;
+    }
 }
 </style>

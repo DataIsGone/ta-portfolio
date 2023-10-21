@@ -1,9 +1,11 @@
 <script setup>
   import Card from '../Card.vue';
+  import TopButton from '../projects/TopButton.vue';
   import { ref, onMounted, computed } from 'vue';
 
   // FILTER
-  const filterTag = ref(null);                                    // Tag currently selected for filtering
+  const currentFilter = ref('');
+  const filterTag = ref(null);
   const items = ref([]);
 
   const fetchData = async() => {
@@ -15,7 +17,7 @@
     }
   };
 
-  onMounted(fetchData);                                          // Trying to avoid uncaught error in promise
+  onMounted(fetchData);                                               // Trying to avoid uncaught error in promise
 
   const uniqueTags = computed(() => {
     const allTags = [].concat(...Object.values(items.value).map(item => item.tags));
@@ -31,45 +33,58 @@
 
   const filterByTag = tag => {
     filterTag.value = tag;
+    currentFilter.value = tag;
   };
 
   const resetFilter = () => {
     filterTag.value = null;
+    currentFilter.value = null;
   };
+
+  const headerTitle = computed(() => {
+    if (currentFilter.value) {
+      return `Projects: ${currentFilter.value}`;
+    } 
+    else {
+      return 'Projects';
+    }
+  });
+
 </script>
 
 <template>
   <div class="container-fluid">
     <div class="align">
-    <h1>Projects</h1>
-    <hr>
-    <nav class="navbar-filter">
-      <div class="wrap">
-        <span>Filter by Tag: </span>
-          <a @click="resetFilter">All</a>
-          <span>&nbsp;&nbsp;</span>
-      </div>
-      <div v-for="(tag, index) in uniqueTags" :key="tag" class="wrap">
-        <a @click="filterByTag(tag)">
-          <span>{{ tag }}</span>
-          <span v-if="index != uniqueTags.length - 1">&nbsp;&nbsp;</span>
-        </a>
-      </div>
-    </nav>
-  </div>
-  </div>
-  <div class="container center">
-    <div class="row">
-        <Card v-for="(item, index) in filteredItems"
-          :key="index"
-          :cardTitle="item.name"
-          :cardDesc="item.desc"
-          :cardImg="item.preview"
-          :cardRole="item.role"
-          :cardProjId="item.id"/>
+      <h1 class="style-pixel-bold">{{ headerTitle }}</h1>
+      <hr>
+      <nav class="navbar-filter">
+        <div class="wrap">
+          <span class="style-pixel-bold">Filter by Tag: </span>
+          <a @click="resetFilter" class="link-style style-pixel">All</a>
+          <span class="style-pixel">&nbsp;|&nbsp;</span>
+        </div>
+        <div v-for="(tag, index) in uniqueTags" :key="tag" class="wrap">
+          <a @click="filterByTag(tag)">
+            <span class="link-style style-pixel">{{ tag }}</span>
+            <span v-if="index != uniqueTags.length - 1" @click.stop class="style-pixel">&nbsp;|&nbsp;</span>
+          </a>
+        </div>
+      </nav>
     </div>
   </div>
+  <div class="container center">
+      <div class="row">
+          <Card v-for="(item, index) in filteredItems"
+            :key="index"
+            :cardTitle="item.name"
+            :cardDesc="item.desc"
+            :cardImg="item.preview"
+            :cardRole="item.role"
+            :cardProjId="item.id"/>
+      </div>
+  </div>
   <div class="spacer"></div>
+  <TopButton></TopButton>
 </template>
 
 <style scoped>
@@ -98,7 +113,19 @@ h1 {
 hr {
   padding: 0 10px;
 }
+
 .align {
   margin: 0 5em;
+}
+
+.link-style {
+    cursor: pointer;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.link-style:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
 </style>

@@ -19,7 +19,9 @@
 </script>
 
 <template>
-    <div>Navigation:</div>
+    <div>
+        <span class="style-pixel">Navigation:</span>
+    </div>
         <div>
             <span
             v-for="(sectionName, index) in currProj.projSection" 
@@ -30,4 +32,11 @@
         </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media screen and (max-width: 575px) {
+    .section, .section-text {
+        padding: 1em 0;
+        margin: 1em;
+    }
+}
+</style>

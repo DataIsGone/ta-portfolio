@@ -53,23 +53,21 @@ onMounted(async () => {
           <span class="section-text" v-html="accomplishment"></span>
           <br v-if="index < about.accomplishments.length - 1" />
         </span>
+        <hr>
+        <!-- NOW -->
+        <h3>Now</h3>
+        <span v-for="(accomplishment, index) in about.accomplishments" :key="index">
+          <span class="section-text" v-html="accomplishment"></span>
+          <br v-if="index < about.accomplishments.length - 1" />
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-  /* .row {
-    padding: 1em 3em;
-  } */
-
-  /* .col-sm {
-    margin: 0;
-  } */
-
   .section-text {
     text-align: left;
-    /* text-justify: inter-word; */
   }
   .section-link {
     text-align: left;

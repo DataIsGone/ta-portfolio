@@ -1,5 +1,5 @@
 <template>
-    <div class="title">
+    <div class="title style-pixel-bold">
         <h3>{{ secTitle }}</h3>
         <hr>
     </div>
@@ -24,7 +24,7 @@
 
     @media (max-width: 575px) {
         .title {
-            padding: 0em 0.5em; /* Reduce padding on smaller screens */
+            padding: 0em 0.5em;
         }
     }
 </style>

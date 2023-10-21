@@ -8,9 +8,9 @@
               </div>
               <!-- Text Column -->
               <div class="col-md-6 no-space">
-                  <h3>Hey I'm Ryan (she/her)!</h3>
-                  <h5>I'm a tech artist looking to grow in tools and materials/shaders for games.</h5>
-                  <p class="lead">meeeeeeeeeeeee</p>
+                  <h3 class="style-pixel-bold">Hey I'm <b>Ryan</b> (she/her)!</h3>
+                  <h5>I'm a tech artist specializing in tools and materials.</h5>
+                  <p class="lead">Searching for a junior position at a large studio.</p>
               </div>
           </div>
       </div>
@@ -40,6 +40,7 @@
     h3, h5 {
       color: white;
     }
+
     .no-space {
       padding: 0 !important;
       margin: 0 !important;

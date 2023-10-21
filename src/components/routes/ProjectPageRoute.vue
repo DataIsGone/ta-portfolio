@@ -4,7 +4,6 @@
     import ExVideo from '../projects/Video.vue'
     import Title from '../projects/AnchorTitle.vue'
     import Overview from '../projects/Overview.vue'
-    import TopButton from '../projects/TopButton.vue';
 
     import { ref, onMounted, computed } from 'vue';
     import { useRoute } from 'vue-router';
@@ -25,15 +24,15 @@
 
 <template>
     <!-- Individual Navigation Area -->
-    <div class="section sticky-top title">
-      <h1>{{ currProj.projTitle }}</h1>
+    <div class="section sticky-top title buf" id="navbar">
+      <h1 class="style-pixel-bold">{{ currProj.projTitle }}</h1>
       <ProjNav></ProjNav>
     </div>
 
     <!-- Individual Project Overview -->
     <div class="section" id="Overview">
         <Title secTitle="Overview"></Title>
-        <Overview :content="currProj.projOverview"></Overview>
+        <Overview :content="currProj"></Overview>
     </div>
 
 
@@ -58,7 +57,7 @@
                         <ExImage :exImg="img[0]" :exDesc="img[1]"></ExImage>
                     </div>
                 </div>
-                <br><br><br>
+                <br><br>
             </div>
         </div>
         <div v-else class="fluid-container">
@@ -90,9 +89,21 @@
     
     .title {
         background-color: white;
+        padding: 2em 0;
     }
 
     .spacer {
         height: 5em;
     }
+
+@media screen and (max-width: 575px) {
+    .section, .section-text {
+        padding: 1em 0;
+        margin: 1em;
+    }
+
+    #navbar {
+        margin: 0;
+    }
+}
 </style>

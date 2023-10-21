@@ -13,8 +13,8 @@
 </script>
 
 <template>
-  <footer class="sticky-bottom">  <!-- class="sticky-bottom" if you want to make this sticky in the future -->
-    Ryan Davis
+  <footer class="sticky-bottom">
+    <span class="style-pixel-bold">Ryan Davis | </span>
     <IconLink v-for="(socialMedia, index) in socialMedia"
         :key="index"
         :link="socialMedia.url"

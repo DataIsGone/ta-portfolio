@@ -1,9 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Dogica, Source Code Pro;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
 
@@ -12,7 +12,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
 }
+
+@font-face {
+  font-family: 'Dogica';
+  src: url('/dogicapixel.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Dogica Bold';
+  src: url('/dogicapixelbold.otf') format('opentype');
+}
+
+/* @font-face {
+  font-family: 'Source Code Pro';
+  src: url('/SourceCodePro-Regular.ttf') format('opentype');
+} */
 
 a {
   font-weight: 500;
@@ -68,21 +84,17 @@ button:focus-visible {
 }
 
 #app {
-  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.style-pixel {
+  font-family: 'Dogica';
+  text-transform: uppercase;
+}
+
+.style-pixel-bold {
+  font-family: 'Dogica Bold';
+  text-transform: uppercase;
 }

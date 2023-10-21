@@ -12,14 +12,14 @@
             "Procedural NPC Generator": {
                 "desc": "I wrote a procedural NPC generator in C# to ensure that my team did not need to set up individual and animate background characters. This saved us time when it came to populating a busy and lively world.",
                 "img": {
-                    "0": ["../src/assets/img/NPC_gen_1.gif", "test 1"],
-                    "1": ["../src/assets/img/NPC_gen_1.gif", "test 2"]
+                    "0": ["../src/assets/img/hg/NPC_gen_1.gif", "test 1"]
                 }
             },
             "2.5D Art Style Development": {
                 "desc": "I handled the entire development of our 2.5D Paper Mario-inspired art style, where the characters are 2D and the environment is 3D. I opted for this to avoid both high vertex count (200k+) and lighting (for most scenes) on the Quest 2’s mobile processor. Because this was a computer science course, I made these choices to give our team more time to focus on programming-related tasks.",
                 "img": {
-                    "0": ["../src/assets/img/follow_me_curr.gif", "test 1"]
+                    "0": ["../src/assets/img/hg/follow_test.gif", "test 2"],
+                    "1": ["../src/assets/img/hg/follow_curr.gif", "test 1"]
                 }
             }
         }
@@ -33,6 +33,15 @@
             ["Languages", "C#"],
             ["Desc.", "At Microsoft's Mixed Reality Capture Studios, I was a contract Processing Technician and 3D Generalist on holograms (moving photogrammetry) for internal and external clients."]
         ],
+        "extraOverview": [
+            "I performed the following:",
+            [
+                "Generated point clouds, UV maps, and textures from RGB and infrared photos using proprietary systems",
+                "Detailed and adjusted meshes using scripts and/or hand-fixes on subdivided meshes",
+                "Enhanced textures via feedback from our in-house art director using automated Photoshop actions",
+                "Tested mesh quality using lighting tests"
+            ]
+        ],
         "projContent": {
             "Demo Reel": {
                 "desc": "Please Note: I can only show published footage in this reel due to Microsoft's policy. Any wireframes, in-progress shots, etc. displayed have been shown publicly by Microsoft and/or their clients.",
@@ -44,7 +53,7 @@
     },
     "2" :{
         "projTitle": "Starmetry",
-        "projSection": ["Overview", "Point & Click Controls in 2.5D", "Reference System", "Math Problem Generator", "Base Pixel Shader"],
+        "projSection": ["Overview", "Point & Click Controls in 2.5D", "Reference System", "Math Problem Generator", "Pixel Art Shader"],
         "projOverview": [
             ["Course", "Oregon State University's CS4xx: Special Projects (2.5 months)"],
             ["Roles", "Solo project - all development and art was made by me"],
