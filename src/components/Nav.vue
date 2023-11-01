@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar sticky-top navbar-expand-xl">
-        <span class="navbar-brand style-pixel-bold">Ryan Davis</span>
+        <span class="style-pixel-bold">Ryan Davis</span> <!-- navbar-brand -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,5 +37,9 @@
 
     span, .nav-link {
         color: white;
+    }
+
+    .nav-link:hover {
+        color: black;
     }
 </style>

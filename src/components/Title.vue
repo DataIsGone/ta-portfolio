@@ -10,7 +10,7 @@
               <div class="col-md-6 no-space">
                   <h3 class="style-pixel-bold">Hey I'm <b>Ryan</b> (she/her)!</h3>
                   <h5>I'm a tech artist specializing in tools and materials.</h5>
-                  <p class="lead">Searching for a junior position at a large studio.</p>
+                  <h5 class="soft-text">Currently: Applying for Junior Positions</h5>
               </div>
           </div>
       </div>
@@ -33,7 +33,7 @@
     }
 
     .img-fluid {
-      margin: 0;
+      margin: 0 0 1.5em 0;
       padding: 10px 0;
     }
 
@@ -44,5 +44,9 @@
     .no-space {
       padding: 0 !important;
       margin: 0 !important;
+    }
+
+    .soft-text {
+      color: rgba(255, 255, 255, 0.5);
     }
   </style>

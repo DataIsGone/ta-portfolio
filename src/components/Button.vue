@@ -1,4 +1,3 @@
-
 <template>
   <button @click="navigate">{{ label }}</button>
 </template>
@@ -12,22 +11,25 @@ const props = defineProps({
   href: String,
 });
 
-// Navigation function
 const navigate = () => {
   window.location.href = props.href;
 };
 </script>
 
 <style scoped>
-    button {
-        padding: 10px 20px;
-        background-color: #007BFF;
-        color: white;
+    button {  
         border: none;
-        border-radius: 5px;
+        outline: none;
+        background-color: black;
+        color: white;
         cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
     }
     button:hover {
-        background-color: #0056b3;
+        background-color: #ffb100;
+        color: black;
     }
+    
 </style>

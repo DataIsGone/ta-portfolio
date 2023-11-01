@@ -22,10 +22,16 @@
 
         <!-- Lightbox -->
         <div v-if="showLightbox" class="lightbox" @click="showLightbox=false">
-        <img :src="exImg" :alt="exDesc" class="lightbox-image">
+            <img :src="exImg" :alt="exDesc" class="lightbox-image">
         </div>
         <br>
-        <span><em>{{ exDesc }}</em></span>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-lg-8 ex-desc">
+                <span><em>{{ exDesc }}</em></span>
+            </div>
+            <div class="col"></div>
+        </div>
     </div>
 </template>
   
@@ -33,6 +39,11 @@
     .ex {
         padding: 1em;
     }
+
+    .ex-desc {
+        padding-top: 10px;
+    }
+
     .thumbnail {
         cursor: pointer;
         height: 335px;

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h1>{{ name }}</h1>
+                <h1 class="style-pixel-bold">{{ name }}</h1>
             </div>
         </div>
         <div class="row">
@@ -10,7 +10,7 @@
                 <h2>{{ jobTitle }}</h2>
             </div>
             <div class="col-sm">
-                <Button label="Download Resume" href="https://drive.google.com/file/d/1k-svp2RjTd3J2fpwqgGF3THUBBrnHDlA/view?usp=sharing"/>
+                <Button label="Download Full Resume" href="https://drive.google.com/file/d/1FpV8qwiLEPiT_TmzfR_P0cYVqy_FjdZz/view?usp=sharing"/>
             </div>
         </div>
         <hr>
@@ -155,10 +155,6 @@
         margin: 0 auto;
         text-align: left;
         padding: 0 0 5px 0;
-    }
-
-    hr {
-        padding: 0 0 10px 0;
     }
 
     h1 {

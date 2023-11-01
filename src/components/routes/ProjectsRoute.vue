@@ -119,13 +119,19 @@ hr {
 }
 
 .link-style {
+    background: linear-gradient(to left, rgba(255,255,255,0) 50%, #ffb100 50%) 100% 98% / 220% 100% no-repeat;
+    color: #333;
+    cursor: pointer !important;
     cursor: pointer;
-    color: #007BFF;
-    text-decoration: none;
+    padding: 2px 5px;
+    text-decoration: none !important;
+    transition: all .35s ease-in-out;
 }
 
 .link-style:hover {
-    text-decoration: underline;
-    color: #0056b3;
+    background-position: 0 98%;
+    color: #000;
+    outline: none;
+    transition: all .5s ease-in-out;
 }
 </style>

@@ -22,6 +22,11 @@
         text-align: left;
     }
 
+    /* hr {
+        background: black !important;
+        border-width: 2px;
+    } */
+
     @media (max-width: 575px) {
         .title {
             padding: 0em 0.5em;

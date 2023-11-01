@@ -1,15 +1,10 @@
 {
-    "github": {
+    "GitHub": {
         "icon": "fa-brands fa-github-alt",
         "url": "https://github.com/DataIsGone"
     },
-    "linkedin": {
+    "LinkedIn": {
         "icon": "fa-brands fa-linkedin",
         "url": "https://www.linkedin.com/in/ryanalexdavis/"
-    },
-    "discord": {
-        "icon": "fa-brands fa-discord",
-        "url": "https://devpost.com/NODATA"
     }
-
 }
