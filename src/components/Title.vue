@@ -4,7 +4,7 @@
           <div class="row align-items-center">
               <!-- Image Column -->
               <div class="col-md-6 no-space">
-                  <img src="src/assets/img/ta_logo.png" alt="Profile Image" class="img-fluid">
+                  <img :src="imgPath" alt="Profile Image" class="img-fluid">
               </div>
               <!-- Text Column -->
               <div class="col-md-6 no-space">
@@ -17,13 +17,15 @@
   </div>
 </template>
   
-  <script>
-  export default {
-    name: 'Title'
-  };
-  </script>
+<script setup>
+  import { ref } from 'vue';
+  import taLogo from '/src/assets/img/ta_logo.png';
+
+  const name = ref('Title');
+  const imgPath = taLogo;
+</script>
   
-  <style scoped>
+<style scoped>
     .titleBar {
         background-color: #000000;
     }
